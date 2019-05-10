@@ -1,0 +1,99 @@
+#droppable-zone {
+	border: 10px dashed #ccc;
+	height: 100px;
+	position: relative;
+	overflow: hidden;
+}
+
+#droppable-zone.hover {
+	border: 10px dashed #aaa;
+}
+
+#droppable-zone-wrapper {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+#droppable-zone-text {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 33px;
+	overflow: hidden;
+}
+
+.droppable-file {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	height: 100% !important; 
+	width: 100%;
+	cursor: pointer;
+}
+#files{
+	width: 100%;
+}
+#files *{
+	max-width: 100%;
+}
+.hi098123_div{
+	margin-top: 40px;
+}
+.progressbackground{
+	background-color: #e2e1df;
+}
+#pg1{
+	background: -webkit-linear-gradient(180deg, #0f96c1, #1a6891);
+	background:-moz-linear-gradient(180deg, #0f96c1, #1a6891);
+	background:-ms-linear-gradient(180deg, #0f96c1, #1a6891);
+	background: -o-linear-gradient(180deg, #0f96c1, #1a6891);
+	background:linear-gradient(180deg, #0f96c1, #1a6891);
+}
+#progressnow{
+    color: #1a6891;
+    font-weight: bolder;
+}
+table{
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+table td{
+	padding: 10px 5px;
+}
+.hi098123btn{
+	border: 2px solid #89bdff;
+	border-radius: 5px;
+	background-color: #fff;
+	color: #000;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 10px 0px;
+	cursor: pointer;
+	text-align: center;
+	width: 100%;
+	display: block;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.hi098123btn:hover{
+	background-color: #89bdff;
+	color: #fff;
+}
+.hi098123btn:after{
+	content: " →";
+}
+.hi098123btn{
+	max-width: 500px;
+}
+.teR{
+	text-align: right;
+}
+.teC{
+	text-align: center;
+}

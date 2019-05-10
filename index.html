@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>hi098123.tistory.com</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script type='text/javascript' src='main.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		;(function($, window, document, undefined) {
+		  $(document).ready(function() {
+		    var input = $('#hi098123_file');
+		    var dropzone = $('#droppable-zone');
+
+		    if(dropzone.length > 0) {
+		      var dropzonetext = $('#droppable-zone-text');
+
+		      $(document.body).bind('dragover drop', function(e) {
+		        e.preventDefault();
+		        return false;
+		      });
+
+		      dropzone.bind('dragover', function() {
+		        dropzone.addClass('hover');
+		      });
+
+		      dropzone.bind('dragleave', function() {
+		        dropzone.removeClass('hover');
+		      });
+
+		      dropzone.bind('drop', function(e) {
+		        dropzone.removeClass('hover');
+		        file = e.originalEvent.dataTransfer.files[0];
+		        hi098123_filechange(file);
+		        dropzonetext.text(file.name);
+		      });
+
+		      input.bind('change', function() {
+		        file = input[0].files[0];
+		        dropzonetext.text(file.name);
+		        hi098123_filechange(file);
+		      });
+		    }
+		  });
+		})(jQuery, window, document);
+	</script>
+</head>
+<body>
+	<div id="droppable-zone">
+		<div id="droppable-zone-wrapper">
+			<div id="droppable-zone-text">
+				파일을 드래그앤드롭 (Drag & Drop Here)
+			</div>
+		</div>
+		<input type="file" class="droppable-file" id="hi098123_file" style="max-width: 100%;" onchange="hi098123_filechange(this.files[0]);document.getElementById('droppable-zone-text').innerText=this.files[0].name;">
+	</div>
+	<div>
+		<span id="progressnow"></span>
+		<span style="float: right;">또는 위를 클릭하여 파일을 불러올 수 있습니다.</span>
+	</div>
+	<div class="hi098123_div" style="color: red;">
+		<noscript>자바스크립트를 사용할수 없습니다. 다른브라우저를 이용하시거나 자바스크립트 사용을 허용해주세요!!</noscript>
+	</div>
+	<!-- 여기에 기능 리스트들 -->
+	<div class="hi098123_div">
+		<span style="font-size: 1.25em;">옵션</span>
+		<div style="margin: 20px 0px;">
+			<table border="0">
+				<th>실행여부</th>
+				<th>옵션</th>
+				<th>옵션 값</th>
+				<tr>
+					<td class="teC">
+						<input type="checkbox" id="hi098123_1" name="hi098123_1" value="확장자">
+					</td>
+					<td><label for="hi098123_1">확장자 변환</label></td>
+					<td>
+						<select id="hi098123_ext">
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="teC">
+						<input type="checkbox" id="hi098123_2" name="hi098123_2" value="반전">
+					</td>
+					<td><label for="hi098123_2">반전(상하/좌우)</label></td>
+					<td>
+						<select id="hi098123_flip">
+							<option>좌-우 반전</option>
+							<option>상-하 반전</option>
+						</select>
+					</td>
+				</tr>
+				<tr class="videoonly">
+					<td class="teC">
+						<input type="checkbox" id="hi098123_3" name="hi098123_3" value="길이">
+					</td>
+					<td><label for="hi098123_3">구간 자르기</label></td>
+					<td>
+						<div style="display: inline-block;">
+							<input type="number" id="hi098123_sh" min="0" style="width: 3em;" value="0">
+							<input type="number" id="hi098123_sm" min="0" style="width: 3em;" value="0">
+							<input type="number" id="hi098123_ssm" min="0.00" style="width: 4em;" value="0.00">
+						</div>
+						~
+						<div style="display: inline-block;">
+							<input type="number" id="hi098123_eh" min="0" style="width: 3em;" value="0"><!-- max="48" 와 같이 조절 -->
+							<input type="number" id="hi098123_em" min="0" style="width: 3em;" value="0">
+							<input type="number" id="hi098123_esm" min="0.00" style="width: 4em;" value="0.00">
+						</div>
+					</td>
+				</tr>
+				<tr class="videoonly">
+					<td class="teC">
+						<input type="checkbox" id="hi098123_4" name="hi098123_4" value="음소거">
+					</td>
+					<td><label for="hi098123_4">음소거</label></td>
+					<td>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<span class="hi098123btn" onclick="hi098123_start();">인코딩 실행</span>
+	<div class="hi098123_div">
+		<span style="font-size: 1.25em;">진행 상황</span>
+		<div class="progressbackground" style="margin: 20px 0px;">
+			<div id="pg1" style="height:24px;width:0%"></div>
+		</div>
+	</div>
+	<div class="hi098123_div">
+		<span style="font-size: 1.25em;">결과</span>
+		<div style="margin: 20px 0px;">
+			<a class="hi098123btn" id="hi098123btn">다운로드</a>
+		</div>
+		<div id="files"></div>
+	</div>
+</body>
+</html>
