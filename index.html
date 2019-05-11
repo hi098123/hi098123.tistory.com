@@ -83,11 +83,13 @@
 					<td class="teC">
 						<input type="checkbox" id="hi098123_2" name="hi098123_2" value="반전">
 					</td>
-					<td><label for="hi098123_2">반전(상하/좌우)</label></td>
+					<td><label for="hi098123_2">반전,회전</label></td>
 					<td>
 						<select id="hi098123_flip">
 							<option>좌-우 반전</option>
 							<option>상-하 반전</option>
+							<option>시계방향 회전</option>
+							<option>시계반대 방향 회전</option>
 						</select>
 					</td>
 				</tr>
@@ -108,6 +110,22 @@
 							<input type="number" id="hi098123_em" min="0" style="width: 3em;" value="0">
 							<input type="number" id="hi098123_esm" min="0.00" style="width: 4em;" value="0.00">
 						</div>
+					</td>
+				</tr>
+				<tr class="videoonly">
+					<td class="teC">
+						<input type="checkbox" id="hi098123_5" name="hi098123_5" value="크기 조절">
+					</td>
+					<td><label for="hi098123_5">크기 조절</label></td>
+					<td>
+						<select id="hi098123_size">
+							<option>4K</option>
+							<option>1080P</option>
+							<option>720P</option>
+							<option>480P</option>
+							<option>360P</option>
+						</select>
+						<input type="text" id="hi098123_size2" placeholder="1920:1080 와 같이 입력">
 					</td>
 				</tr>
 				<tr class="videoonly">
