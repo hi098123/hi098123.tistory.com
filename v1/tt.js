@@ -5,4 +5,7 @@
 		el.innerHTML='<blockquote style="background:#fafafa" data-ke-style="style3">업데이트 된 툴을 사용하려면? <a href="https://t.hi098123.com/'+ptol[location.pathname]+'" target="_blank" rel="noopener">더 향상된 툴 이용하기</a></blockquote>';
 		ref.parentElement.insertBefore(el,ref);
 	}
+	setTimeout(function(){if(document.querySelector('.uoc-count').textContent=='공감'){
+		document.querySelector('.uoc-count').textContent='0'
+	}},1000)
 })();
