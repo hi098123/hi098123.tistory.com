@@ -5,7 +5,7 @@
 		el.innerHTML='<blockquote style="padding:12px 25px;background:#fafafa" data-ke-style="style3">광고 개수도 적고, 업데이트 된 툴을 사용하려면? <a href="https://t.hi098123.com/'+ptol[location.pathname]+'" target="_blank" rel="noopener">더 향상된 툴 이용하기</a></blockquote>';
 		ref.parentElement.insertBefore(el,ref);
 	}
-	setTimeout(function(){if(document.querySelector('.uoc-count').textContent=='공감'){
-		document.querySelector('.uoc-count').textContent='0'
+	setTimeout(function(){var l=document.querySelector('.uoc-count');if(l){
+		if(l.textContent=='공감'){l.textContent='0'}
 	}},1000)
 })();
