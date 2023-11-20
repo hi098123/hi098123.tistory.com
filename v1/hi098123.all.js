@@ -16,7 +16,7 @@ function _Search(){try{var e=looseURIEncode(document.querySelector(".mainsearch 
         ref.parentElement.insertBefore(el,ref);
         document.querySelector('form[action*="/comment/add/"]').outerHTML='<p>* 더 이상 댓글을 작성할 수 없습니다.</p><p>새로운 기능 추가와 오류수정은 <a href="https://t.hi098123.com/'+ptol[location.pathname]+'" target="_blank" rel="noopener">신규 페이지에서 지원됩니다.</a></p>'
     }
-    ptol=JSON.parse('{"/393":"reaction-speed-test","/358":"color-picker","/390":"qr-reader","/408":"face-blur","/118":"codec","/5":"hash","/6":"hash","/388":"eml-reader","/409":"repeating-decimal","/392":"ip-calculator","/415":"korean-number"}');//오류수정 또는 대폭 개선
+    ptol=JSON.parse('{"/393":"reaction-speed-test","/358":"color-picker","/390":"qr-reader","/408":"face-blur","/118":"codec","/5":"hash","/6":"hash","/388":"eml-reader","/409":"repeating-decimal","/392":"ip-calculator","/415":"korean-number","/261":"random-datetime"}');//오류수정 또는 대폭 개선
     if(ptol[location.pathname]){
         var el=document.createElement('div'),ref=document.querySelector('#tt-body-page div.article .titlegroup');
         el.innerHTML='<blockquote style="text-align:center;padding:15px 20px;background:#4d4d50;color:#fff" data-ke-style="style3"><a style="display:inline-block;color:#FFEB3B" href="https://t.hi098123.com/'+ptol[location.pathname]+'" target="_blank" rel="noopener">광고도 적고 오류수정(또는 개선)된 툴을 사용하려면? <u>여기 클릭!</u></a><span style="display:inline-block;"> 이 페이지에서는 툴을 더 이상 업데이트를 하지 않을 예정입니다.</span></blockquote>';
